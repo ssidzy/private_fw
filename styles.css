@@ -1,0 +1,192 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center content horizontally */
+    background: linear-gradient(to bottom, #003366, #0099cc); /* Deep navy to sky blue */
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+}
+
+.main-heading {
+    margin: 20px 0;
+    font-size: 32px;
+    font-weight: bold; /* Made it bolder */
+    color: #ffffff; /* White for high contrast */
+    text-align: center;
+}
+
+
+
+.logo {
+    height: 50px; /* Adjust as necessary */
+    vertical-align: middle; /* Align logo with text */
+    margin-right: 10px; /* Space between logo and text */
+}
+
+.applications {
+    display: flex;
+    justify-content: space-between; /* Space out the two applications */
+    width: 100%;
+}
+
+.form-container,
+.chatbot-container {
+    flex: 1;
+    padding: 20px;
+    background-color: #ffffff; /* White background for both sections */
+    border-radius: 8px;
+    margin: 10px; /* Add space between the sections */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Softer shadow for depth */
+    transition: box-shadow 0.3s;
+}
+
+.form-container:hover,
+.chatbot-container:hover {
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
+}
+
+.app-heading {
+    text-align: center; /* Centered application headings */
+    color: #003366; /* Dark navy blue for a professional touch */
+    font-size: 28px; /* Slightly larger for emphasis */
+    margin-bottom: 20px;
+    font-weight: 700; /* Bolder font weight for headings */
+}
+
+label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+    color: #555; /* Softer look for labels */
+}
+
+input[type="text"],
+select {
+    width: calc(100% - 20px); /* Full width accounting for padding */
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    transition: border-color 0.3s;
+    font-size: 16px; /* Increased font size for better readability */
+}
+
+input[type="text"]:focus,
+select:focus {
+    border-color: #007BFF;
+    outline: none;
+}
+
+button {
+    margin-top: 20px;
+    padding: 12px 20px; /* Slightly larger padding */
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 16px; /* Consistent font size for buttons */
+    font-weight: 600; /* Bold button text */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Soft shadow */
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.notification {
+    margin-top: 20px;
+    font-weight: bold;
+    transition: color 0.3s;
+    color: #d9534f; /* Alert color for notifications */
+}
+
+#loading-container {
+    position: relative;
+    margin-top: 10px;
+}
+
+.loading-bar {
+    display: none;
+    height: 5px;
+    background-color: #007BFF;
+    border-radius: 5px;
+}
+
+.spinner {
+    display: none;
+    border: 8px solid #f3f3f3; /* Light grey */
+    border-top: 8px solid #007BFF; /* Blue */
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+    margin-top: 10px;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.chatbox {
+    display: flex;
+    flex-direction: column;
+    height: 400px;
+    border: 1px solid #ddd;
+    padding: 10px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Soft shadow */
+}
+
+.chat-messages {
+    flex: 1;
+    overflow-y: auto;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #f9f9f9; /* Light grey for chat messages */
+}
+
+.chat-messages p {
+    margin: 5px 0;
+    font-size: 14px; /* Consistent font size for messages */
+}
+
+#user-input {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    transition: border-color 0.3s;
+    width: calc(100% - 20px); /* Ensure full width */
+}
+
+#user-input:focus {
+    border-color: #007BFF;
+    outline: none;
+}
+
+#send-btn {
+    margin-left: 5px;
+    padding: 10px 15px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-weight: 600; /* Bold text for clarity */
+}
+
+#send-btn:hover {
+    background-color: #0056b3;
+}

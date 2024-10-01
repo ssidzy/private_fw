@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apexon Framework</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="main-heading">
+            <img src="C:\Users\Siddarth.S\Music\testing\logo4.png" alt="Logo" class="logo" width="50" height="50" />
+            Apexon Framework
+        </h1>
+        <div class="applications">
+            <div class="form-container">
+                <h2 class="app-heading">Apexon Model Optimizer</h2>
+                <form id="data-form">
+                    <label for="dataset-link">Dataset Link:</label>
+                    <input type="text" id="dataset-link" required>
+                    
+                    <label for="quantization-type">Quantization Type:</label>
+                    <select id="quantization-type" required>
+                        <option value="4-bit-small">4 bit small</option>
+                        <option value="4-bit-medium">4 bit medium</option>
+                    </select>
+                    
+                    <button type="submit">Submit</button>
+                </form>
+                <div id="notification" class="notification"></div>
+                <div id="loading-container">
+                    <div id="loading-bar" class="loading-bar"></div>
+                    <div id="spinner" class="spinner"></div>
+                </div>
+            </div>
+
+            <div class="chatbot-container">
+                <h2 class="app-heading">Inference Model</h2>
+                <div class="chatbox">
+                    <label for="model-select">Select Model:</label>
+                    <select id="model-select" required>
+                        <option value="model1">Model 1</option>
+                        <option value="model2">Model 2</option>
+                        <option value="model3">Model 3</option>
+                    </select>
+                    <div id="chat-messages" class="chat-messages"></div>
+                    <input type="text" id="user-input" placeholder="Type your message here..." />
+                    <button id="send-btn">Send</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
